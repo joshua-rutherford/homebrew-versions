@@ -9,9 +9,6 @@ class Kettle54 < Formula
   bottle :unneeded
 
   def install
-    rm_rf Dir["*.{bat}"]
-    libexec.install Dir["*"]
-
     (etc+"kettle").install libexec+"pwd/carte-config-master-8080.xml" => "carte-config.xml"
     (etc+"kettle/.kettle").install libexec+"pwd/kettle.pwd"
     (etc+"kettle/simple-jndi").mkpath
